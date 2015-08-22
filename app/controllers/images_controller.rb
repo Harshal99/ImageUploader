@@ -1,5 +1,5 @@
 class ImagesController < ApplicationController
-  before_action :set_image, only: [:show, :edit, :update, :destroy]
+  before_action :set_image, only: [:edit, :update, :destroy]
 
   # GET /images
   # GET /images.json
@@ -15,6 +15,7 @@ class ImagesController < ApplicationController
   # GET /images/1
   # GET /images/1.json
   def show
+         @image = Image.find(params[:id])
   end
 
   # GET /images/new
@@ -74,7 +75,8 @@ class ImagesController < ApplicationController
     def set_image
 
       @image = Image.find(params[:id])
-      @album = @image.album
+      @album = current_user.albums.find(@image.album_id)
+
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
