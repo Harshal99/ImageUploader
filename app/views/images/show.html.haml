@@ -14,7 +14,6 @@
       %pre.prettyprint= image_tag @image.avatar.url(:thumb)
 
 .form-group
-  = link_to t('.back', :default => t("helpers.links.back")),images_path, :class => 'btn btn-default'
   = link_to t('.edit', :default => t("helpers.links.edit")),edit_image_path(@image), :class => 'btn btn-default'
   = link_to t('.destroy', :default => t("helpers.links.destroy")),
     image_path(@image),
