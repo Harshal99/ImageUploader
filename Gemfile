@@ -20,6 +20,7 @@ gem 'devise'
 gem 'devise-bootstrap-views'
 gem 'bootstrap-sass'
 gem 'bootstrap-sass-extras'
+gem  'rmagick'
 gem "paperclip", "~> 4.3"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

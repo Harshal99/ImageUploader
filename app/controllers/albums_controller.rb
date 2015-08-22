@@ -43,7 +43,7 @@ class AlbumsController < ApplicationController
   # PATCH/PUT /albums/1.json
   def update
     respond_to do |format|
-      if current_user.album.update(album_params)
+      if @album.update(album_params)
         format.html { redirect_to @album, notice: 'Album was successfully updated.' }
         format.json { render :show, status: :ok, location: @album }
       else

@@ -3,6 +3,11 @@ class ImagesController < ApplicationController
 
   # GET /images
   # GET /images.json
+  #def onlyimage
+  #  @album = Album.find(params[:album_id])
+  #  @image = @album.images
+  #end
+
   def index
     @images = current_user.images
   end
@@ -26,7 +31,7 @@ class ImagesController < ApplicationController
   # POST /images
   # POST /images.json
   def create
-  	binding.pry
+  	
     @image = Image.new(image_params)
 
     respond_to do |format|
@@ -67,7 +72,9 @@ class ImagesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_image
+
       @image = Image.find(params[:id])
+      @album = @image.album
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

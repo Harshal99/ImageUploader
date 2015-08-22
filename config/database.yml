@@ -2,5 +2,5 @@ development:
   adapter: postgresql
   host: localhost
   database: image_upload_app
-  username: pallavsharma
-  password: pallavsharma
+  username: postgres
+  password: root123

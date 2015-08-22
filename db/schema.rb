@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20150820174951) do
   add_index "albums", ["user_id"], name: "index_albums_on_user_id", using: :btree
 
   create_table "images", force: :cascade do |t|
+    t.string   "avatar"
     t.string   "name"
     t.string   "tag_line"
     t.integer  "album_id"
